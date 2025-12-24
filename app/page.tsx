@@ -9,7 +9,10 @@ export default function Home() {
     <>
       {session.isPending && <div>Loading...</div>}
       {session.data?.session ? (
-        <div>Welcome, {session.data.user?.name}!</div>
+        <div>
+          Welcome, {session.data.user?.name}!
+          <button onClick={() => authClient.signOut()}>sign out</button>
+        </div>
       ) : (
         <div>
           <button
