@@ -8,4 +8,10 @@ export const auth = betterAuth({
       rejectUnauthorized: false,
     },
   }),
+  socialProviders: {
+    spotify: {
+      clientId: process.env.SPOTIFY_CLIENT_ID!,
+      clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
+    },
+  },
 });
